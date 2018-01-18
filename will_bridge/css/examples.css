@@ -1011,48 +1011,17 @@ a.viewsource:before {
 }
 .baseplate{
 	position: absolute;
-	
 	top: 0;
 	left: 0;
 	max-width: 2448px;
 	height: 2448px;
 }
-
-
-.mainimg400top{
-    /*position: absolute;*/
-    position:absolute;
-    top: 400;
-    left: 100;
-    width: 50px;
-    height: 50px;  
-    border: #000;
-    border-style: solid;
-    border-width: 2px 2px 2px 2px;
-    -webkit-transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    transform: translate3d(0,0,0);
-    overflow: hidden;
-    visibility: visible;
-
-}
-
 .mainimg{
-    /*position: absolute;*/
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 50px;
-    height: 50px;  
-    border: #000;
-    border-style: solid;
-    border-width: 2px 2px 2px 2px;
-    -webkit-transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    transform: translate3d(0,0,0);
-    overflow: hidden;
+    width: 2448px;
+    height: 2448px;  
     visibility: visible;
      background: url("../img/willbridge_250.png") no-repeat; 
      position: absolute;
@@ -1061,10 +1030,6 @@ a.viewsource:before {
     width: 300px;
     height: 250px;
     overflow: hidden;
-
-}
-*:not(html) {
-    -webkit-transform: translate3d(0, 0, 0);
 }
 /*
 
