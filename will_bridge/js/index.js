@@ -7,11 +7,14 @@ var example_wrapper = document.getElementById("example-wrapper");
 // mainimg.addEventListener('touchmove', function(e) {
 //  e.preventDefault();
 // }, false);
+    //mainimg_url = "img/willbridge1.png";
+   //  mainimg_url = "img/willbridge_250.png";
+   // mainimg.setAttribute("data", mainimg_url);
 
 // init controller
     var controller = new ScrollMagic.Controller({
         container: example_wrapper,
-        duration: 2400, //in px
+        //duration: 2400, //in px
     });
 //PIN scroll magic Pin//
     //var pindur = 20; //in px
@@ -46,7 +49,7 @@ TweenMax.set(mainimg, {x:0, y:0, scale:0.38, transformOrigin:'-12% 0%'});
 
 tl_bridge.timeScale(1);//sets timeScale
 
-tl_bridge.to(mainimg, 10, {x:-1000, y:2500,scale:1.5, force3D:true, rotationZ:0.01}, '0');
+tl_bridge.to(mainimg, 10, {x:700, y:500,scale:1.5, force3D:true, rotationZ:0.01}, '0');
 tl_bridge.to(mobileadvanced, 10, {backgroundColor: "white",scale: 0.4,borderRadius: 75}, "-=10");
 
 //_end timeline tl_bridge_//
@@ -69,6 +72,7 @@ tl_bridge.to(mobileadvanced, 10, {backgroundColor: "white",scale: 0.4,borderRadi
 
     // we'd only like to use iScroll for mobile...
     if (isMobile) {
+
         // configure iScroll
         var myScroll = new IScroll('#example-wrapper', {
             // don't scroll horizontal
