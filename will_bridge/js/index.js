@@ -33,7 +33,7 @@ onAnimationComplete = function () {
 };
 //_set up for start_//
 
-TweenMax.set(mainimg, {x:0, y:0, scale:0.38, transformOrigin:'-12% 0%'});
+TweenMax.set(baseplate, {x:-496, y:0, scale:0.5, transformOrigin:'12% 0%'});
 //TweenMax.set(baseplate, {x:"-33%", y:"-33%", scale:0.4});
 
 //_This is the MAIN time line_//
@@ -46,7 +46,7 @@ TweenMax.set(mainimg, {x:0, y:0, scale:0.38, transformOrigin:'-12% 0%'});
 
 tl_bridge.timeScale(1);//sets timeScale
 
-tl_bridge.to(mainimg, 10, {x:100, y:3000,scale:1.5, force3D:true, rotationZ:0.01}, '0');
+tl_bridge.to(baseplate, 20, {x:0, y:3000,scale:1, force3D:true, rotationZ:0.01}, '0');
 tl_bridge.to(mobileadvanced, 10, {backgroundColor: "white",scale: 0.4,borderRadius: 75}, "-=10");
 
 //_end timeline tl_bridge_//
