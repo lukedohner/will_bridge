@@ -3,7 +3,7 @@ var baseplate = document.getElementById("baseplate");
 var mainimg = document.getElementById("mainimg");
 var mobileadvanced = document.getElementById("mobileadvanced");
 var example_wrapper = document.getElementById("example-wrapper");
-
+var content_wrapper = document.getElementById("content-wrapper");
 // mainimg.addEventListener('touchmove', function(e) {
 //  e.preventDefault();
 // }, false);
@@ -11,7 +11,7 @@ var example_wrapper = document.getElementById("example-wrapper");
 // init controller
     var controller = new ScrollMagic.Controller({
         container: example_wrapper,
-        duration: 2400, //in px
+        //duration: 2400, //in px
     });
 //PIN scroll magic Pin//
     //var pindur = 20; //in px
@@ -33,7 +33,7 @@ onAnimationComplete = function () {
 };
 //_set up for start_//
 
-TweenMax.set(baseplate, {x:-496, y:0, scale:0.5, transformOrigin:'12% 0%'});
+TweenMax.set(mainimg, {x:-496, y:0, scale:0.5, transformOrigin:'12% 0%'});
 //TweenMax.set(baseplate, {x:"-33%", y:"-33%", scale:0.4});
 
 //_This is the MAIN time line_//
@@ -46,8 +46,9 @@ TweenMax.set(baseplate, {x:-496, y:0, scale:0.5, transformOrigin:'12% 0%'});
 
 tl_bridge.timeScale(1);//sets timeScale
 
-tl_bridge.to(baseplate, 20, {x:0, y:3000,scale:1, force3D:true, rotationZ:0.01}, '0');
-tl_bridge.to(mobileadvanced, 10, {backgroundColor: "white",scale: 0.4,borderRadius: 75}, "-=10");
+tl_bridge.to(mainimg, 40, {x:-850, y:3000,scale:1.5, force3D:true, rotationZ:0.01}, '1');
+tl_bridge.to(mobileadvanced, 40, {backgroundColor: "white",scale: 0.4,borderRadius: 75}, "-=40");
+//tl_bridge.to(mainimg, 10, {x:-850, y:3900,scale:1.5, force3D:true, rotationZ:0.01}, '41');
 
 //_end timeline tl_bridge_//
 
@@ -56,11 +57,19 @@ tl_bridge.to(mobileadvanced, 10, {backgroundColor: "white",scale: 0.4,borderRadi
             triggerElement: "#trigger",
             // duration: 500,
             duration: 4500,
-            offset: 100
-        })
-        .setTween(tl_bridge)
-        .setPin("#mobileadvanced")
-        .addTo(controller);
+            offset: 75
+        });
+        scene.setTween(tl_bridge);
+        scene.setPin("#mobileadvanced");
+
+        //scene.duration:33;
+        //scene.addIndicators({name:"1(duration 4500)"});
+       scene.addTo(controller);
+/////
+/////
+
+/////
+////
 
     // detect if mobile browser. regex -> http://detectmobilebrowsers.com
     var isMobile = (function(a) {

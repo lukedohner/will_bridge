@@ -16,6 +16,9 @@
 #example-wrapper .scrollContent {
 	height: 100%;
 }
+.scrollContent {
+	border-style: solid;
+}
 
 .horizontal.scrollContainer {
 	overflow-y: hidden;
@@ -23,12 +26,14 @@
 }
 #example-wrapper.scrollContainer .scrollContent {
 	width: 100%;
-	height: auto;
+	/*height: auto;*/
+	height: 100%;
 }
 #example-wrapper.scrollContainer.horizontal .scrollContent {
 	width: auto;
 	height: 100%;
 }
+
 #example-wrapper.horizontal {
 	white-space: nowrap;
 	font-size: 0;  /* fix for spaces between inline block divs */
@@ -967,15 +972,6 @@ a.viewsource:before {
 	margin-top: 20px;
 }
 
-#imagesequence {
-	height: 300px;
-}
-
-.copyright {
-	font-variant: italic;
-	font-size: 11px;
-}
-
 #bezier {
 	overflow: hidden;
 	position: relative;
@@ -1013,7 +1009,7 @@ a.viewsource:before {
 	position: absolute;
 	top: 0;
 	left: 0;
-	max-width: 2448px;
+	width: 2448px;
 	height: 2448px;
 }
 .mainimg{
@@ -1025,6 +1021,7 @@ a.viewsource:before {
     visibility: visible;
     background: url("../img/willbridge1.png") no-repeat; 
     overflow: hidden;
+    background-size:cover;
 }
 /*
 
